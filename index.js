@@ -242,12 +242,12 @@
         return false;
       }
       item.start(this.messageTimeout);
-      item.on("timeout", function() {
-        return worker.send({
-          action: "queueItemTimeout",
-          id: item.id
-        });
-      });
+      // item.on("timeout", function() {
+      //   return worker.send({
+      //     action: "queueItemTimeout",
+      //     id: item.id
+      //   });
+      // });
       this._sentMessages[item.id] = item;
       return true;
     };
